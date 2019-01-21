@@ -23,13 +23,14 @@ function mergeArrays(firstHalf, secondHalf) {
     // compare the first two terms in each array
     // if a <= b, sorted << a
     if (firstHalf[0] <= secondHalf[0]) {
-      // push mutates array
+      // shift mutates array
       sorted.push(firstHalf.shift())
     }
     else { // if a > b, sorted << b
       sorted.push(secondHalf.shift())
     }
   }
+  // if the first array but no second array, push last number to sorted
   while(firstHalf.length) {
     sorted.push(firstHalf.shift());
   }
